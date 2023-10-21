@@ -44,7 +44,7 @@ List<int> dedupe(List<int> arr) {
 }
 ```
 
-# Task 3: Valid Bracket
+## Task 3: Valid Bracket
 The takes a string input and returns a boolean value indicating whether the input string contains a valid pair of brackets or not.
 
 ```
