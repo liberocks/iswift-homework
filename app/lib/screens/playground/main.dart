@@ -18,7 +18,7 @@ class PlaygroundSelectionScreen extends StatelessWidget {
           children: [
             Container(margin: EdgeInsets.only(top: 60)),
             Text(
-              'Choose Section',
+              'Choose Sections',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 19,

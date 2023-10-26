@@ -27,6 +27,7 @@ flutter:
   assets:
     - assets/images/sandbox.png
     - assets/images/reset.png
+    - assets/images/placeholder.png
 
   fonts:
     - family: Poppins
