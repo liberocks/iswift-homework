@@ -46,10 +46,10 @@ class PlaygroundHomeScreen extends StatelessWidget {
                     onPressed: () => context.go('/playground/tab'),
                     style: OutlinedButton.styleFrom(
                       padding:
-                          EdgeInsets.all(0), // Adjust the padding as needed
+                          EdgeInsets.all(0),
                       side: BorderSide(
                         color: Colors.white,
-                      ), // Define the border color
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
