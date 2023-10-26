@@ -16,9 +16,9 @@ class OutlinedButtonWithImageAndLabel extends StatelessWidget {
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        padding: EdgeInsets.all(16), // Set padding on all sides
+        padding: EdgeInsets.all(16), 
         side: BorderSide(
-          color: const Color(0xD9D9D9FF), // Set the border color
+          color: const Color(0xD9D9D9FF), 
           width: 1,
         ),
         shape: RoundedRectangleBorder(
@@ -29,16 +29,16 @@ class OutlinedButtonWithImageAndLabel extends StatelessWidget {
         children: [
           Image.asset(
             imageAsset,
-            width: 50, // Set the image width
-            height: 50, // Set the image height
+            width: 50, 
+            height: 50, 
           ),
-          SizedBox(width: 8), // Add space between icon and label
+          SizedBox(width: 8), 
           Text(
             label.toUpperCase(),
             style: TextStyle(
               fontFamily: 'SignikaNegative',
               fontWeight: FontWeight.bold, fontSize: 16,
-              color: Colors.black, // Set the label text color
+              color: Colors.black, 
             ),
           ),
         ],
