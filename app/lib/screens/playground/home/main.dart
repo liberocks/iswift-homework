@@ -42,21 +42,36 @@ class PlaygroundHomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Next',
-                    style: TextStyle(
-                        color: Colors.blue[700],
-                        fontFamily: 'Poppins',
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    'Tab bar, Grid View, ListView',
-                    style: TextStyle(
-                        color: Colors.grey[700],
-                        fontFamily: 'Poppins',
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal),
+                  OutlinedButton(
+                    onPressed: () => context.go('/playground/tab'),
+                    style: OutlinedButton.styleFrom(
+                      padding:
+                          EdgeInsets.all(0), // Adjust the padding as needed
+                      side: BorderSide(
+                        color: Colors.white,
+                      ), // Define the border color
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Next',
+                          style: TextStyle(
+                              color: Colors.blue[700],
+                              fontFamily: 'Poppins',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Text(
+                          'Tab bar, Grid View, ListView',
+                          style: TextStyle(
+                              color: Colors.grey[700],
+                              fontFamily: 'Poppins',
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

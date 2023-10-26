@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 class ImageCard extends StatelessWidget {
   final String imageAsset;
   final String title;
-  const ImageCard({required this.imageAsset, required this.title});
+  final double imageWidth;
+  final double imageHeight;
+  const ImageCard(
+      {required this.imageAsset,
+      required this.title,
+      this.imageWidth = 85,
+      this.imageHeight = 50});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +30,8 @@ class ImageCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
                     imageAsset,
-                    width: 85,
-                    height: 50,
+                    width: imageWidth,
+                    height: imageHeight,
                     fit: BoxFit.cover,
                   )),
               SizedBox(height: 10),
