@@ -5,27 +5,28 @@ import 'screens/playground/home/main.dart';
 import 'screens/playground/main.dart';
 import 'screens/home/main.dart';
 
+final _navigatorKey = GlobalKey<NavigatorState>();
+
 final GoRouter router = GoRouter(
+  navigatorKey: _navigatorKey,
+  initialLocation: '/',
   routes: <RouteBase>[
     GoRoute(
-      path: '/',
-      builder: (BuildContext context, GoRouterState state) {
-        return const HomeScreen();
-      },
-      routes: <RouteBase>[
-        GoRoute(
-            path: 'playground',
-            builder: (BuildContext context, GoRouterState state) {
-              return const PlaygroundSelectionScreen();
-            },
-            routes: <RouteBase>[
-              GoRoute(
-                  path: 'home',
-                  builder: (BuildContext context, GoRouterState state) {
-                    return const PlaygroundHomeScreen();
-                  })
-            ]),
-      ],
-    ),
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          return const HomeScreen();
+        }),
+    GoRoute(
+        name: '/playground',
+        path: '/playground',
+        builder: (BuildContext context, GoRouterState state) {
+          return const PlaygroundSelectionScreen();
+        }),
+    GoRoute(
+        name: '/playground/home',
+        path: '/playground/home',
+        builder: (BuildContext context, GoRouterState state) {
+          return const PlaygroundHomeScreen();
+        })
   ],
 );
