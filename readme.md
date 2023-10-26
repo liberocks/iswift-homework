@@ -1,4 +1,5 @@
 # ISwift Homework
 
 ## Table of Contents
-- [Homework 1]( homework1/readme.md)
+- [Homework 1]( homework1/readme.md )
+- [Playground App]( app/readme.md )
