@@ -17,7 +17,7 @@ class TouchableSection extends StatelessWidget {
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        padding: EdgeInsets.all(16), // Set padding on all sides
+        padding: EdgeInsets.all(16), 
         side: BorderSide(width: 0, color: Colors.transparent),
       ),
       child: Row(
@@ -32,7 +32,7 @@ class TouchableSection extends StatelessWidget {
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                    color: Colors.blue[700], // Set the label text color
+                    color: Colors.blue[700], 
                   ),
                 ),
                 FractionallySizedBox(
@@ -43,7 +43,7 @@ class TouchableSection extends StatelessWidget {
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w500,
                       fontSize: 14,
-                      color: Colors.grey[500], // Set the label text color
+                      color: Colors.grey[500], 
                     ),
                   ),
                 ),
@@ -52,7 +52,7 @@ class TouchableSection extends StatelessWidget {
           ),
           Icon(
             Icons.arrow_forward_ios,
-            color: Colors.black87, // Set the icon color
+            color: Colors.black87, 
           ),
         ],
       ),
