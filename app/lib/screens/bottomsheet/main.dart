@@ -31,7 +31,7 @@ class BottomSheetModal extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/sandbox.png',
                     label: 'Playground',
-                    onPressed: () => context.go('/playground'),
+                    onPressed: () => context.push('/playground'),
                   ),
                 ),
               ],
@@ -43,7 +43,7 @@ class BottomSheetModal extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/reset.png',
                     label: 'Reset App',
-                    onPressed: () => context.go('/'),
+                    onPressed: () => context.push('/'),
                   ),
                 ),
               ],

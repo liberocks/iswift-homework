@@ -27,7 +27,7 @@ class PlaygroundHomeScreen extends StatelessWidget {
             Icons.chevron_left_sharp,
             size: 32,
           ),
-          onPressed: () => context.go('/playground'),
+          onPressed: () => context.pop(),
         ),
       ),
       body: Padding(
@@ -43,7 +43,7 @@ class PlaygroundHomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   OutlinedButton(
-                    onPressed: () => context.go('/playground/tab'),
+                    onPressed: () => context.push('/playground/tab'),
                     style: OutlinedButton.styleFrom(
                       padding:
                           EdgeInsets.all(0), // Adjust the padding as needed

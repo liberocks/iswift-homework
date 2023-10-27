@@ -31,7 +31,7 @@ class PlaygroundSelectionScreen extends StatelessWidget {
               label: 'Dummy UI',
               description:
                   'Practice flutter UI and get familiar with UI Widgets',
-              onPressed: () => context.go('/playground/home'),
+              onPressed: () => context.push('/playground/home'),
             ),
             Divider(),
             TouchableSection(

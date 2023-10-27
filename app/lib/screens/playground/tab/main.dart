@@ -29,7 +29,7 @@ class PlaygroundTab extends StatelessWidget {
               Icons.chevron_left_sharp,
               size: 32,
             ),
-            onPressed: () => context.go('/playground/home'),
+            onPressed: () => context.pop(),
           ),
           bottom: TabBar(
             labelStyle: TextStyle(

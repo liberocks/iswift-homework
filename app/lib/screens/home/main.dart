@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/sandbox.png',
                     label: 'Playground',
-                    onPressed: () => context.go('/playground'),
+                    onPressed: () => context.push('/playground'),
                   ),
                 )
               ],
