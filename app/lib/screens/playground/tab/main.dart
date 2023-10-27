@@ -9,7 +9,7 @@ class PlaygroundTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, // Number of tabs for the nested tab view
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0.1,
@@ -48,59 +48,58 @@ class PlaygroundTab extends StatelessWidget {
         body: TabBarView(
           children: [
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 10),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      ArticleCard(
-                        imageAsset: 'assets/images/placeholder.png',
-                        title: 'How can I be a Flutter Developler Expert?',
-                        author: 'Jill Lepore',
-                        date: '23 May 23',
-                        onPressed: () {},
-                      ),
-                      SizedBox(height: 50),
-                    ],
-                  ),
-                )),
-
-            // Content for Tab 2
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: 10),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    ArticleCard(
+                      imageAsset: 'assets/images/placeholder.png',
+                      title: 'How can I be a Flutter Developler Expert?',
+                      author: 'Jill Lepore',
+                      date: '23 May 23',
+                      onPressed: () {},
+                    ),
+                    SizedBox(height: 50),
+                  ],
+                ),
+              ),
+            ),
             GridView.count(
               padding: EdgeInsets.only(
                 top: 10,

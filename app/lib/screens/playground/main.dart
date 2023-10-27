@@ -38,7 +38,6 @@ class PlaygroundSelectionScreen extends StatelessWidget {
               label: 'Switch App',
               description:
                   'Goes to main home page and choose between playground or Pixels',
-              // TODO: Add onPressed action that show a bottomsheet modal
               onPressed: () => showModalBottomSheet(
                 context: context,
                 builder: (context) => BottomSheetModal(),

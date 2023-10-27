@@ -27,13 +27,14 @@ class ImageCard extends StatelessWidget {
           child: Column(
             children: [
               ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    imageAsset,
-                    width: imageWidth,
-                    height: imageHeight,
-                    fit: BoxFit.cover,
-                  )),
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(
+                  imageAsset,
+                  width: imageWidth,
+                  height: imageHeight,
+                  fit: BoxFit.cover,
+                ),
+              ),
               SizedBox(height: 10),
               Text(
                 title,

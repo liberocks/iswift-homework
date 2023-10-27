@@ -86,13 +86,14 @@ class ArticleCard extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                      alignment: Alignment.bottomCenter,
-                      height: 85,
-                      child: Icon(
-                        Icons.star,
-                        size: 20,
-                        color: Colors.blue[700],
-                      )),
+                    alignment: Alignment.bottomCenter,
+                    height: 85,
+                    child: Icon(
+                      Icons.star,
+                      size: 20,
+                      color: Colors.blue[700],
+                    ),
+                  ),
                 ],
               ),
             ],

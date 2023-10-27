@@ -45,11 +45,10 @@ class PlaygroundHomeScreen extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () => context.push('/playground/tab'),
                     style: OutlinedButton.styleFrom(
-                      padding:
-                          EdgeInsets.all(0), // Adjust the padding as needed
+                      padding: EdgeInsets.all(0),
                       side: BorderSide(
                         color: Colors.white,
-                      ), // Define the border color
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,15 +79,16 @@ class PlaygroundHomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      child: Text(
-                        'CONTAINER AND TEXT',
-                        style: TextStyle(
-                            color: Colors.teal[500],
-                            fontFamily: 'Poppins',
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold),
-                      )),
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    child: Text(
+                      'CONTAINER AND TEXT',
+                      style: TextStyle(
+                          color: Colors.teal[500],
+                          fontFamily: 'Poppins',
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
                   ArticleCard(
                     author: 'Jill Lepore',
                     date: '23 May 23',
