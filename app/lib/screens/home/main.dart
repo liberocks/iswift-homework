@@ -32,7 +32,8 @@ class HomeScreen extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/sandbox.png',
                     label: 'Playground',
-                    onPressed: () => context.router.pushNamed('/playground'),
+                    onPressed: () =>
+                        AutoRouter.of(context).pushNamed('/playground'),
                   ),
                 )
               ],

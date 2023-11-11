@@ -27,14 +27,14 @@ class PlaygroundTabScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.chevron_left_sharp,
               size: 32,
             ),
-            onPressed: () => context.router.back(),
+            onPressed: () => AutoRouter.of(context).pop(),
           ),
           bottom: TabBar(
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
               fontFamily: 'Poppins',
@@ -42,19 +42,19 @@ class PlaygroundTabScreen extends StatelessWidget {
             labelColor: Colors.blue[700],
             unselectedLabelColor: const Color.fromARGB(255, 47, 37, 37),
             tabs: [
-              Tab(text: 'ListView'),
-              Tab(text: 'GridView'),
+              const Tab(text: 'ListView'),
+              const Tab(text: 'GridView'),
             ],
           ),
         ),
         body: TabBarView(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ArticleCard(
                       imageAsset: 'assets/images/placeholder.png',
                       title: 'How can I be a Flutter Developler Expert?',
@@ -97,13 +97,13 @@ class PlaygroundTabScreen extends StatelessWidget {
                       date: '23 May 23',
                       onPressed: () {},
                     ),
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                   ],
                 ),
               ),
             ),
             GridView.count(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 10,
                 left: 10,
                 right: 10,
@@ -111,43 +111,43 @@ class PlaygroundTabScreen extends StatelessWidget {
               ),
               crossAxisCount: 2,
               children: [
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',
                   title: '1st Image',
                 ),
-                ImageCard(
+                const ImageCard(
                   imageWidth: 125,
                   imageHeight: 100,
                   imageAsset: 'assets/images/placeholder.png',

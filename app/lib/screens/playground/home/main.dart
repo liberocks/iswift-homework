@@ -29,7 +29,7 @@ class PlaygroundHomeScreen extends StatelessWidget {
             Icons.chevron_left_sharp,
             size: 32,
           ),
-          onPressed: () => context.router.back(),
+          onPressed: () => AutoRouter.of(context).pop(),
         ),
       ),
       body: Padding(
@@ -46,7 +46,7 @@ class PlaygroundHomeScreen extends StatelessWidget {
                 children: [
                   OutlinedButton(
                     onPressed: () =>
-                        context.router.pushNamed('/playground/tab'),
+                        AutoRouter.of(context).pushNamed('/playground/tab'),
                     style: OutlinedButton.styleFrom(
                       padding: EdgeInsets.all(0),
                       side: BorderSide(

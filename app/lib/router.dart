@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
 import 'package:playground/screens/home/main.dart';
-import 'package:playground/screens/playground/calculator/main.dart';
+import 'package:playground/screens/playground/counter/main.dart';
 import 'package:playground/screens/playground/input_validation/main.dart';
 import 'package:playground/screens/playground/main.dart';
 import 'package:playground/screens/playground/home/main.dart';
@@ -31,7 +31,7 @@ class AppRouter extends _$AppRouter {
           page: PlaygroundTabRoute.page,
         ),
         AutoRoute(
-          path: '/playground/calculator',
+          path: '/playground/counter',
           page: CalculatorRoute.page,
         ),
         AutoRoute(

@@ -18,7 +18,7 @@ abstract class _$AppRouter extends RootStackRouter {
     CalculatorRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const CalculatorScreen(),
+        child: const CounterScreen(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -55,7 +55,7 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [CalculatorScreen]
+/// [CounterScreen]
 class CalculatorRoute extends PageRouteInfo<void> {
   const CalculatorRoute({List<PageRouteInfo>? children})
       : super(

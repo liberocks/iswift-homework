@@ -43,7 +43,7 @@ class BottomSheetModalComponent extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/reset.png',
                     label: 'Reset App',
-                    onPressed: () => context.router.pushNamed('/'),
+                    onPressed: () => AutoRouter.of(context).pushNamed('/'),
                   ),
                 ),
               ],

@@ -32,27 +32,24 @@ class PlaygroundSelectionScreen extends StatelessWidget {
               label: 'Dummy UI',
               description:
                   'Practice flutter UI and get familiar with UI Widgets',
-              onPressed: () => context.router.pushNamed('/playground/home'),
+              onPressed: () =>
+                  AutoRouter.of(context).pushNamed('/playground/home'),
             ),
             Divider(),
             TouchableSection(
-              label: 'Simple Calculator',
+              label: 'Simple Counter',
               description:
-                  'Creating calculator app that consists add, divide, subtract, and multiply function',
-              onPressed: () => showModalBottomSheet(
-                context: context,
-                builder: (context) => BottomSheetModalComponent(),
-              ),
+                  'Creating counter app that consists add and subtract function',
+              onPressed: () =>
+                  AutoRouter.of(context).pushNamed('/playground/counter'),
             ),
             Divider(),
             TouchableSection(
               label: 'Input Validation',
               description:
                   'Play around with email input and password input validation',
-              onPressed: () => showModalBottomSheet(
-                context: context,
-                builder: (context) => BottomSheetModalComponent(),
-              ),
+              onPressed: () => AutoRouter.of(context)
+                  .pushNamed('/playground/input-validation'),
             ),
             Divider(),
             TouchableSection(
