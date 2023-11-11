@@ -1,11 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
- 
+
 import 'package:playground/components/outlined_button_with_image.dart';
 
-@RoutePage()
-class BottomSheetModal extends StatelessWidget {
-  const BottomSheetModal({super.key});
+class BottomSheetModalComponent extends StatelessWidget {
+  const BottomSheetModalComponent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +29,10 @@ class BottomSheetModal extends StatelessWidget {
               children: [
                 Expanded(
                   child: OutlinedButtonWithImageAndLabel(
-                    imageAsset: 'assets/images/sandbox.png',
-                    label: 'Playground',
-                    onPressed: () => context.router.pushNamed('/playground'),
-                  ),
+                      imageAsset: 'assets/images/sandbox.png',
+                      label: 'Playground',
+                      onPressed: () =>
+                          {AutoRouter.of(context).pushNamed('/playground')}),
                 ),
               ],
             ),

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'package:playground/screens/bottomsheet/main.dart';
+import 'package:playground/components/bottomsheet/main.dart';
 import 'package:playground/components/outlined_button_with_image.dart';
 import 'package:playground/components/touchable_section.dart';
 
@@ -36,12 +36,32 @@ class PlaygroundSelectionScreen extends StatelessWidget {
             ),
             Divider(),
             TouchableSection(
+              label: 'Simple Calculator',
+              description:
+                  'Creating calculator app that consists add, divide, subtract, and multiply function',
+              onPressed: () => showModalBottomSheet(
+                context: context,
+                builder: (context) => BottomSheetModalComponent(),
+              ),
+            ),
+            Divider(),
+            TouchableSection(
+              label: 'Input Validation',
+              description:
+                  'Play around with email input and password input validation',
+              onPressed: () => showModalBottomSheet(
+                context: context,
+                builder: (context) => BottomSheetModalComponent(),
+              ),
+            ),
+            Divider(),
+            TouchableSection(
               label: 'Switch App',
               description:
                   'Goes to main home page and choose between playground or Pixels',
               onPressed: () => showModalBottomSheet(
                 context: context,
-                builder: (context) => BottomSheetModal(),
+                builder: (context) => BottomSheetModalComponent(),
               ),
             ),
           ],

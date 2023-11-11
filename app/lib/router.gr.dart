@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CalculatorRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CalculatorScreen(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    InputValidationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const InputValidationScreen(),
       );
     },
     PlaygroundHomeRoute.name: (routeData) {
@@ -43,6 +55,20 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [CalculatorScreen]
+class CalculatorRoute extends PageRouteInfo<void> {
+  const CalculatorRoute({List<PageRouteInfo>? children})
+      : super(
+          CalculatorRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CalculatorRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -52,6 +78,20 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [InputValidationScreen]
+class InputValidationRoute extends PageRouteInfo<void> {
+  const InputValidationRoute({List<PageRouteInfo>? children})
+      : super(
+          InputValidationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'InputValidationRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
