@@ -1,8 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+ 
+import 'package:playground/components/outlined_button_with_image.dart';
 
-import '../../components/outlined_button_with_image.dart';
-
+@RoutePage()
 class BottomSheetModal extends StatelessWidget {
   const BottomSheetModal({super.key});
 
@@ -31,7 +32,7 @@ class BottomSheetModal extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/sandbox.png',
                     label: 'Playground',
-                    onPressed: () => context.push('/playground'),
+                    onPressed: () => context.router.pushNamed('/playground'),
                   ),
                 ),
               ],
@@ -43,7 +44,7 @@ class BottomSheetModal extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/reset.png',
                     label: 'Reset App',
-                    onPressed: () => context.push('/'),
+                    onPressed: () => context.router.pushNamed('/'),
                   ),
                 ),
               ],

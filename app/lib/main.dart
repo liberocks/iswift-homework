@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
-import 'router.dart';
+import 'package:playground/router.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  /// create an instance of `Router`
+  final _router = AppRouter();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: router,
+      routerConfig: _router.config(),
     );
   }
 }

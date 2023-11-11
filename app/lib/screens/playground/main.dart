@@ -1,10 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../screens/bottomsheet/main.dart';
-import '../../components/outlined_button_with_image.dart';
-import '../../components/touchable_section.dart';
+import 'package:playground/screens/bottomsheet/main.dart';
+import 'package:playground/components/outlined_button_with_image.dart';
+import 'package:playground/components/touchable_section.dart';
 
+@RoutePage()
 class PlaygroundSelectionScreen extends StatelessWidget {
   const PlaygroundSelectionScreen({super.key});
 
@@ -31,7 +32,7 @@ class PlaygroundSelectionScreen extends StatelessWidget {
               label: 'Dummy UI',
               description:
                   'Practice flutter UI and get familiar with UI Widgets',
-              onPressed: () => context.push('/playground/home'),
+              onPressed: () => context.router.pushNamed('/playground/home'),
             ),
             Divider(),
             TouchableSection(

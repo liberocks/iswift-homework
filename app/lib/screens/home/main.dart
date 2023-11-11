@@ -1,8 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../components/outlined_button_with_image.dart';
+import 'package:playground/components/outlined_button_with_image.dart';
 
+@RoutePage()
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   child: OutlinedButtonWithImageAndLabel(
                     imageAsset: 'assets/images/sandbox.png',
                     label: 'Playground',
-                    onPressed: () => context.push('/playground'),
+                    onPressed: () => context.router.pushNamed('/playground'),
                   ),
                 )
               ],

@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+
 import 'package:playground/components/article_card.dart';
 import 'package:playground/components/image_card.dart';
 
+@RoutePage()
 class PlaygroundHomeScreen extends StatelessWidget {
   const PlaygroundHomeScreen({super.key});
 
@@ -27,7 +29,7 @@ class PlaygroundHomeScreen extends StatelessWidget {
             Icons.chevron_left_sharp,
             size: 32,
           ),
-          onPressed: () => context.pop(),
+          onPressed: () => context.router.back(),
         ),
       ),
       body: Padding(
@@ -43,7 +45,8 @@ class PlaygroundHomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   OutlinedButton(
-                    onPressed: () => context.push('/playground/tab'),
+                    onPressed: () =>
+                        context.router.pushNamed('/playground/tab'),
                     style: OutlinedButton.styleFrom(
                       padding: EdgeInsets.all(0),
                       side: BorderSide(
