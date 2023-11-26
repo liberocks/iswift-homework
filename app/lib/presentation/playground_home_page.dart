@@ -59,10 +59,11 @@ class PlaygroundHomeScreen extends StatelessWidget {
                         Text(
                           'Next',
                           style: TextStyle(
-                              color: Colors.blue[700],
-                              fontFamily: 'Poppins',
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600),
+                            color: Colors.blue[700],
+                            fontFamily: 'Poppins',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         Text(
                           'Tab bar, Grid View, ListView',

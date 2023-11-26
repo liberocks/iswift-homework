@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import 'package:playground/components/bottomsheet/main.dart';
-import 'package:playground/components/outlined_button_with_image.dart';
 import 'package:playground/components/touchable_section.dart';
 
 @RoutePage()
@@ -42,6 +41,14 @@ class PlaygroundSelectionScreen extends StatelessWidget {
                   'Creating counter app that consists add and subtract function',
               onPressed: () =>
                   AutoRouter.of(context).pushNamed('/playground/counter'),
+            ),
+            Divider(),
+            TouchableSection(
+              label: 'Simple Calculator',
+              description:
+                  'Creating calculator app that consists add, divide, subtract, and multiply function',
+              onPressed: () =>
+                  AutoRouter.of(context).pushNamed('/playground/calculator'),
             ),
             Divider(),
             TouchableSection(

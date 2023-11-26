@@ -18,6 +18,12 @@ abstract class _$AppRouter extends RootStackRouter {
     CalculatorRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
+        child: const CalculatorScreen(),
+      );
+    },
+    CounterRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
         child: const CounterScreen(),
       );
     },
@@ -31,6 +37,30 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const InputValidationScreen(),
+      );
+    },
+    NewsExploreRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NewsExploreScreen(),
+      );
+    },
+    NewsHomeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NewsHomeScreen(),
+      );
+    },
+    NewsSearchRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NewsSearchScreen(),
+      );
+    },
+    NewsSummaryRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NewsSummaryScreen(),
       );
     },
     PlaygroundHomeRoute.name: (routeData) {
@@ -55,7 +85,7 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [CounterScreen]
+/// [CalculatorScreen]
 class CalculatorRoute extends PageRouteInfo<void> {
   const CalculatorRoute({List<PageRouteInfo>? children})
       : super(
@@ -64,6 +94,20 @@ class CalculatorRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'CalculatorRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CounterScreen]
+class CounterRoute extends PageRouteInfo<void> {
+  const CounterRoute({List<PageRouteInfo>? children})
+      : super(
+          CounterRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CounterRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -92,6 +136,62 @@ class InputValidationRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'InputValidationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NewsExploreScreen]
+class NewsExploreRoute extends PageRouteInfo<void> {
+  const NewsExploreRoute({List<PageRouteInfo>? children})
+      : super(
+          NewsExploreRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsExploreRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NewsHomeScreen]
+class NewsHomeRoute extends PageRouteInfo<void> {
+  const NewsHomeRoute({List<PageRouteInfo>? children})
+      : super(
+          NewsHomeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsHomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NewsSearchScreen]
+class NewsSearchRoute extends PageRouteInfo<void> {
+  const NewsSearchRoute({List<PageRouteInfo>? children})
+      : super(
+          NewsSearchRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsSearchRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NewsSummaryScreen]
+class NewsSummaryRoute extends PageRouteInfo<void> {
+  const NewsSummaryRoute({List<PageRouteInfo>? children})
+      : super(
+          NewsSummaryRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsSummaryRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

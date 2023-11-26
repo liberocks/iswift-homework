@@ -1,8 +1,21 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
 
-import 'package:playground/screens/playground/counter/cubit/counter_cubit.dart';
+import 'package:playground/cubit/counter_cubit.dart';
+
+@RoutePage()
+class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => CalculatorCubit(),
+      child: const CounterView(),
+    );
+  }
+}
 
 class CounterView extends StatelessWidget {
   const CounterView({super.key});
@@ -21,9 +34,10 @@ class CounterView extends StatelessWidget {
         title: const Text(
           'Simple Counter',
           style: TextStyle(
-              fontFamily: 'Poppins',
-              color: Colors.black87,
-              fontWeight: FontWeight.bold),
+            fontFamily: 'Poppins',
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         leading: IconButton(
           icon: Icon(
