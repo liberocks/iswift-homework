@@ -8,6 +8,7 @@ import 'package:playground/cubit/search_stories_cubit.dart';
 import 'package:playground/cubit/search_stories_state.dart';
 import 'package:playground/cubit/top_stories_cubit.dart';
 import 'package:playground/cubit/top_stories_state.dart';
+import 'package:playground/router.dart';
 
 @RoutePage()
 class NewsHomeScreen extends StatelessWidget {
@@ -55,7 +56,8 @@ class NewsHomeScreen extends StatelessWidget {
                                   .multimedia[article.multimedia.length - 1]
                               : '',
                           date: article.date,
-                          onPressed: () {},
+                          onPressed: () => AutoRouter.of(context)
+                              .push(NewsWebviewRoute(url: article.url)),
                         );
                       }).toList(),
                     );

@@ -63,6 +63,13 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const NewsSummaryScreen(),
       );
     },
+    NewsWebviewRoute.name: (routeData) {
+      final args = routeData.argsAs<NewsWebviewRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: NewsWebviewScreen(url: args.url),
+      );
+    },
     PlaygroundHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -194,6 +201,35 @@ class NewsSummaryRoute extends PageRouteInfo<void> {
   static const String name = 'NewsSummaryRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NewsWebviewScreen]
+class NewsWebviewRoute extends PageRouteInfo<NewsWebviewRouteArgs> {
+  NewsWebviewRoute({
+    required String url,
+    List<PageRouteInfo>? children,
+  }) : super(
+          NewsWebviewRoute.name,
+          args: NewsWebviewRouteArgs(url: url),
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsWebviewRoute';
+
+  static const PageInfo<NewsWebviewRouteArgs> page =
+      PageInfo<NewsWebviewRouteArgs>(name);
+}
+
+class NewsWebviewRouteArgs {
+  const NewsWebviewRouteArgs({required this.url});
+
+  final String url;
+
+  @override
+  String toString() {
+    return 'NewsWebviewRouteArgs{url: $url}';
+  }
 }
 
 /// generated route for

@@ -10,6 +10,7 @@ import 'package:playground/presentation/playground_tab_page.dart';
 import 'package:playground/presentation/news_summary_page.dart';
 import 'package:playground/presentation/news_search_page.dart';
 import 'package:playground/presentation/news_home_page.dart';
+import 'package:playground/presentation/news_webview_page.dart';
 import 'package:playground/presentation/news_explore_page.dart';
 
 part 'router.gr.dart';
@@ -62,6 +63,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           path: '/news/summary',
           page: NewsSummaryRoute.page,
+        ),
+        AutoRoute(
+          path: '/news/view',
+          page: NewsWebviewRoute.page,
         ),
       ];
 }
