@@ -76,7 +76,8 @@ class NewsHomeScreen extends StatelessWidget {
                                   .multimedia[article.multimedia.length - 1]
                               : '',
                           date: article.date,
-                          onPressed: () {},
+                          onPressed: () => AutoRouter.of(context)
+                              .push(NewsWebviewRoute(url: article.url)),
                         );
                       }).toList(),
                     );
@@ -95,7 +96,8 @@ class NewsHomeScreen extends StatelessWidget {
                                   .multimedia[article.multimedia.length - 1]
                               : '',
                           date: article.date,
-                          onPressed: () {},
+                          onPressed: () => AutoRouter.of(context)
+                              .push(NewsWebviewRoute(url: article.url)),
                         );
                       }).toList(),
                     );
