@@ -29,6 +29,18 @@ class BottomSheetModalComponent extends StatelessWidget {
               children: [
                 Expanded(
                   child: OutlinedButtonWithImageAndLabel(
+                      imageAsset: 'assets/images/pixelnews-logo.png',
+                      label: 'Pixel News',
+                      onPressed: () =>
+                          {AutoRouter.of(context).pushNamed('/news/home')}),
+                ),
+              ],
+            ),
+            Container(margin: EdgeInsets.only(top: 20)),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButtonWithImageAndLabel(
                       imageAsset: 'assets/images/sandbox.png',
                       label: 'Playground',
                       onPressed: () =>

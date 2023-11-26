@@ -12,6 +12,8 @@ class ArticleModel with _$ArticleModel {
     required String url,
     required String title,
     required String description,
+    required String author,
+    required String date,
     required List<String> multimedia,
   }) = _ArticleModel;
 

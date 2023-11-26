@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'package:playground/components/article_card.dart';
+import 'package:playground/components/dummy_article_card.dart';
 import 'package:playground/components/image_card.dart';
 
 @RoutePage()

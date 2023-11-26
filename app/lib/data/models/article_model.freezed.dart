@@ -24,6 +24,8 @@ mixin _$ArticleModel {
   String get url => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
+  String get author => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
   List<String> get multimedia => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,6 +45,8 @@ abstract class $ArticleModelCopyWith<$Res> {
       String url,
       String title,
       String description,
+      String author,
+      String date,
       List<String> multimedia});
 }
 
@@ -63,6 +67,8 @@ class _$ArticleModelCopyWithImpl<$Res, $Val extends ArticleModel>
     Object? url = null,
     Object? title = null,
     Object? description = null,
+    Object? author = null,
+    Object? date = null,
     Object? multimedia = null,
   }) {
     return _then(_value.copyWith(
@@ -81,6 +87,14 @@ class _$ArticleModelCopyWithImpl<$Res, $Val extends ArticleModel>
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as String,
       multimedia: null == multimedia
           ? _value.multimedia
@@ -103,6 +117,8 @@ abstract class _$$ArticleModelImplCopyWith<$Res>
       String url,
       String title,
       String description,
+      String author,
+      String date,
       List<String> multimedia});
 }
 
@@ -121,6 +137,8 @@ class __$$ArticleModelImplCopyWithImpl<$Res>
     Object? url = null,
     Object? title = null,
     Object? description = null,
+    Object? author = null,
+    Object? date = null,
     Object? multimedia = null,
   }) {
     return _then(_$ArticleModelImpl(
@@ -140,6 +158,14 @@ class __$$ArticleModelImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       multimedia: null == multimedia
           ? _value._multimedia
           : multimedia // ignore: cast_nullable_to_non_nullable
@@ -156,6 +182,8 @@ class _$ArticleModelImpl extends _ArticleModel {
       required this.url,
       required this.title,
       required this.description,
+      required this.author,
+      required this.date,
       required final List<String> multimedia})
       : _multimedia = multimedia,
         super._();
@@ -171,6 +199,10 @@ class _$ArticleModelImpl extends _ArticleModel {
   final String title;
   @override
   final String description;
+  @override
+  final String author;
+  @override
+  final String date;
   final List<String> _multimedia;
   @override
   List<String> get multimedia {
@@ -181,7 +213,7 @@ class _$ArticleModelImpl extends _ArticleModel {
 
   @override
   String toString() {
-    return 'ArticleModel(id: $id, url: $url, title: $title, description: $description, multimedia: $multimedia)';
+    return 'ArticleModel(id: $id, url: $url, title: $title, description: $description, author: $author, date: $date, multimedia: $multimedia)';
   }
 
   @override
@@ -194,6 +226,8 @@ class _$ArticleModelImpl extends _ArticleModel {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
+            (identical(other.author, author) || other.author == author) &&
+            (identical(other.date, date) || other.date == date) &&
             const DeepCollectionEquality()
                 .equals(other._multimedia, _multimedia));
   }
@@ -201,7 +235,7 @@ class _$ArticleModelImpl extends _ArticleModel {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, url, title, description,
-      const DeepCollectionEquality().hash(_multimedia));
+      author, date, const DeepCollectionEquality().hash(_multimedia));
 
   @JsonKey(ignore: true)
   @override
@@ -223,6 +257,8 @@ abstract class _ArticleModel extends ArticleModel {
       required final String url,
       required final String title,
       required final String description,
+      required final String author,
+      required final String date,
       required final List<String> multimedia}) = _$ArticleModelImpl;
   _ArticleModel._() : super._();
 
@@ -237,6 +273,10 @@ abstract class _ArticleModel extends ArticleModel {
   String get title;
   @override
   String get description;
+  @override
+  String get author;
+  @override
+  String get date;
   @override
   List<String> get multimedia;
   @override

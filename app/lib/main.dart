@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:playground/router.dart';
+import 'package:playground/app.dart';
+import 'package:playground/data/repositories/news_repository.dart';
+import 'package:playground/data/services/client.dart';
+import 'package:playground/data/services/providers/news_providers.dart';
 
-void main() => runApp(MyApp());
+Future main() async {
+  await dotenv.load(fileName: ".env");
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  /// create an instance of `Router`
-  final _router = AppRouter();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _router.config(),
-    );
-  }
+  runApp(
+    MyApp(
+      newsRepository: NewsRepository(
+        NewsProvider(
+          ApiClient(),
+        ),
+      ),
+    ),
+  );
 }

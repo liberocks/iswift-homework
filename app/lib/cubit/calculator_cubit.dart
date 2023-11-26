@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:playground/presentation/playground/calculator/cubit/calculator_state.dart';
+
+import 'package:playground/cubit/calculator_state.dart';
 
 class CalculatorCubit extends Cubit<CalculatorState> {
   CalculatorCubit() : super(CalculatorState());

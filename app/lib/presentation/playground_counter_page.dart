@@ -11,7 +11,7 @@ class CounterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => CalculatorCubit(),
+      create: (_) => CounterCubit(),
       child: const CounterView(),
     );
   }
@@ -48,7 +48,7 @@ class CounterView extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: BlocBuilder<CalculatorCubit, int>(
+        child: BlocBuilder<CounterCubit, int>(
           builder: (context, state) {
             return Text(
               '$state',
@@ -64,13 +64,13 @@ class CounterView extends StatelessWidget {
           FloatingActionButton(
             heroTag: 'addButton',
             child: const Icon(Icons.add),
-            onPressed: () => context.read<CalculatorCubit>().increment(),
+            onPressed: () => context.read<CounterCubit>().increment(),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
             heroTag: 'subtractButton',
             child: const Icon(Icons.remove),
-            onPressed: () => context.read<CalculatorCubit>().decrement(),
+            onPressed: () => context.read<CounterCubit>().decrement(),
           ),
         ],
       ),

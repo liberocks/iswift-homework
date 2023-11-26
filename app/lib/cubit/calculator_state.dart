@@ -5,12 +5,13 @@ class CalculatorState {
   final double result;
   final List<(double, double, String)> history;
 
-  CalculatorState(
-      {this.leftOperand = 0,
-      this.rightOperand = 0,
-      this.operator = '',
-      this.result = 0,
-      this.history = const []});
+  CalculatorState({
+    this.leftOperand = 0,
+    this.rightOperand = 0,
+    this.operator = '',
+    this.result = 0,
+    this.history = const [],
+  });
 
   CalculatorState copyWith({
     double? leftOperand,

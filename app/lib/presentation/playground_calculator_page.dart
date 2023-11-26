@@ -11,7 +11,7 @@ class CalculatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => CalculatorCubit(),
+      create: (_) => CounterCubit(),
       child: const CalculatorView(),
     );
   }

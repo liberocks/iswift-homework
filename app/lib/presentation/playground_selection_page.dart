@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'package:playground/components/bottomsheet/main.dart';
+import 'package:playground/components/bottomsheet.dart';
 import 'package:playground/components/touchable_section.dart';
 
 @RoutePage()

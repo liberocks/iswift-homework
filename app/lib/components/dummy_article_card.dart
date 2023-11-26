@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ArticleCard extends StatelessWidget {
-  final String? imageAsset;
+  final String imageAsset;
   final String title;
   final String author;
   final String date;
   final VoidCallback onPressed;
 
   const ArticleCard({
-    this.imageAsset,
+    required this.imageAsset,
     required this.title,
     required this.author,
     required this.date,
@@ -31,17 +31,11 @@ class ArticleCard extends StatelessWidget {
           width: double.infinity,
           child: Row(
             children: [
-              this.imageAsset != null
-                  ? Image.network(
-                      this.imageAsset!,
-                      width: 85,
-                      height: 85,
-                    )
-                  : Image.asset(
-                      'assets/images/placeholder.png',
-                      width: 85,
-                      height: 85,
-                    ),
+              Image.asset(
+                imageAsset,
+                width: 85,
+                height: 85,
+              ),
               SizedBox(width: 20),
               Expanded(
                 child: Column(
@@ -50,10 +44,8 @@ class ArticleCard extends StatelessWidget {
                       title,
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize:
-                            Theme.of(context).textTheme.titleSmall!.fontSize,
-                        fontWeight:
-                            Theme.of(context).textTheme.titleSmall!.fontWeight,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
                         color: Colors.black87,
                       ),
                     ),
@@ -61,17 +53,11 @@ class ArticleCard extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          author.length > 18
-                              ? '${author.substring(0, 18)}...'
-                              : author,
+                          author,
                           style: TextStyle(
                             fontFamily: 'Poppins',
-                            fontSize:
-                                Theme.of(context).textTheme.bodySmall!.fontSize,
-                            fontWeight: Theme.of(context)
-                                .textTheme
-                                .bodySmall!
-                                .fontWeight,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
                             color: Colors.grey[500],
                           ),
                         ),
@@ -87,12 +73,8 @@ class ArticleCard extends StatelessWidget {
                           date,
                           style: TextStyle(
                             fontFamily: 'Poppins',
-                            fontSize:
-                                Theme.of(context).textTheme.bodySmall!.fontSize,
-                            fontWeight: Theme.of(context)
-                                .textTheme
-                                .bodySmall!
-                                .fontWeight,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
                             color: Colors.grey[500],
                           ),
                         )
